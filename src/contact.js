@@ -1,21 +1,35 @@
-function Contact() {
+import { block } from "million/react";
+import email from "./assets/email.png"
+import github from "./assets/github.svg"
+import linkedin from "./assets/linkedin.svg"
+
+const Contact = block(() => {
     return (
-        <div id="contact">
-            <h3 id="contact-heading">Let's get in touch!</h3>
-            <p class="contact-link">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:timwallacedev@gmail.com" class="social-link">   Timwallacedev@gmail.com</a>
-            </p>
-            <p class="contact-link">
-                <i class="fa-brands fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/tim-wallace-974261229/" class="social-link">   Tim Wallace</a>
-            </p>
-            <p class="contact-link">
-                <i class="fa-brands fa-square-github"></i>
-                <a href="https://github.com/TimWallaceDev" class="social-link">   Tim Wallace</a>
-            </p>
+        <div className="contact">
+            <h3 className="contact__heading">Let's get in touch!</h3>
+
+            <a href="mailto:timwallacedev@gmail.com"  className="contact__link">
+                <div className="contact__item">
+                    <img className="contact__icon" src={email} alt="email logo"></img>
+                    <h3 className="contact__handle">Timwallacedev@gmail.com</h3>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/timothy-wallace-dev/" className="contact__link">
+                <div className="contact__item">
+                    <img className="contact__icon" src={linkedin} alt="linkedin logo"></img>
+                    <h3 className="contact__handle">@timothy-wallace-dev</h3>
+                </div>
+            </a>
+
+            <a href="https://github.com/TimWallaceDev" className="contact__link">
+                <div className="contact__item">
+                    <img className="contact__icon" src={github} alt="github logo"></img>
+                    <h3 className="contact__handle">@TimWallaceDev</h3>
+                </div>
+            </a>
         </div>
     )
-}
+})
 
 export default Contact;
