@@ -15,14 +15,14 @@ const Contact = block(() => {
                 </div>
             </a>
 
-            <a href="https://www.linkedin.com/in/timothy-wallace-dev/" className="contact__link">
+            <a href="https://www.linkedin.com/in/timothy-wallace-dev/" className="contact__link" target="_blank" rel="noreferrer">
                 <div className="contact__item">
                     <img className="contact__icon" src={linkedin} alt="linkedin logo"></img>
                     <h3 className="contact__handle">@timothy-wallace-dev</h3>
                 </div>
             </a>
 
-            <a href="https://github.com/TimWallaceDev" className="contact__link">
+            <a href="https://github.com/TimWallaceDev" className="contact__link" target="_blank" rel="noreferrer">
                 <div className="contact__item">
                     <img className="contact__icon" src={github} alt="github logo"></img>
                     <h3 className="contact__handle">@TimWallaceDev</h3>
