@@ -12,31 +12,40 @@ const Projects = block(() => {
 
             <div className="projects__container" >
 
-                <a className="project__link" href="https://timwallace.ca/melody-mastermind/#/melody-mastermind" target="_blank" rel="noreferrer">
-                    <div className="project">
-                        <div className="project__right">
-                            <img className="project__image" src={melodyMastermind} alt="screenshot of melody mastermind game UI"></img>
-                        </div>
-                        <div className="project__left">
+
+                <div className="project">
+                    <div className="project__right">
+                        <img className="project__image" src={melodyMastermind} alt="screenshot of melody mastermind game UI"></img>
+                    </div>
+                    <div className="project__left">
+                        <div className="project__top">
                             <h4 className="project__title">Melody Mastermind</h4>
                             <p className="project__description">A music guessing game. Choose from a variety of genres and playlists. The goal is to correctly identify the title of the song playing. The faster you answer, the more points you earn.</p>
-                            <p className="project__link-mobile">Live Link</p>
+                        </div>
+                        <div className="project__bottom">
+                            <a className="project__live-link" href="https://timwallace.ca/melody-mastermind/#/melody-mastermind" target="_blank" rel="noreferrer">Live Link</a>
+                            <a className="project__github-link" href="https://github.com/TimWallaceDev/melody-mastermind" target="_blank" rel="noreferrer">Github Repo</a>
                         </div>
                     </div>
-                </a>
+                </div>
 
-                <a className="project__link" href="https://humanmagic.ca" target="_blank" rel="noreferrer">
-                    <div className="project">
-                        <div className="project__right">
-                            <img className="project__image" src={humanMagic} alt="screenshot of human magic website landing page"></img>
-                        </div>
-                        <div className="project__left">
+
+                <div className="project">
+                    <div className="project__right">
+                        <img className="project__image" src={humanMagic} alt="screenshot of human magic website landing page"></img>
+                    </div>
+                    <div className="project__left">
+                        <div className="project__top">
                             <h4 className="project__title">Human Magic</h4>
                             <p className="project__description">A Website for local Toronto band "Human Magic".</p>
-                            <p className="project__link-mobile">Live Link</p>
+                        </div>
+                        <div className="project__bottom">
+                            <a className="project__live-link" href="https://humanmagic.ca" target="_blank" rel="noreferrer">Live Link</a>
+                            <a className="project__github-link" href="https://github.com/TimWallaceDev/humanmagic" target="_blank" rel="noreferrer">Github Repo</a>
                         </div>
                     </div>
-                </a>
+                </div>
+
 
             </div>
         </div >

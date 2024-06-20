@@ -88,10 +88,6 @@
 
   @include desktop {
     padding: 32px;
-
-    &:hover {
-      background-color: orange;
-    }
   }
 
   &__heading {
@@ -100,6 +96,10 @@
   }
 
   &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 16px;
     @include tablet {
       flex: 1;
     }
@@ -114,17 +114,32 @@
     }
   }
 
-  &__link {
+  &__live-link {
     text-decoration: none;
-  }
-
-  &__link-mobile {
     color: blue;
+    display: block;
+    margin-top: 8px;
+    width: min-content;
+    text-wrap: nowrap;
 
-    @include desktop {
-      display: none;
+    &:hover {
+      color: red;
     }
   }
+
+  &__github-link {
+    color: blue;
+    display: block;
+    margin-top: 8px;
+    text-decoration: none;
+    width: min-content;
+    text-wrap: nowrap;
+
+    &:hover {
+      color: red;
+    }
+  }
+
 
   &__title {
     font-size: 1.5rem;
@@ -166,6 +181,10 @@
     align-items: center;
     padding: 8px 16px;
     gap: 16px;
+
+    &:hover {
+      color: red;
+    }
 
   }
 
