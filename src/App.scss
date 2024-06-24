@@ -167,11 +167,7 @@
     text-decoration: none;
     color: black;
 
-    @include desktop {
-      &:hover {
-        background-color: orange;
-      }
-    }
+    
   }
 
   &__item {
@@ -183,7 +179,7 @@
     gap: 16px;
 
     &:hover {
-      color: red;
+      color: blue;
     }
 
   }

@@ -1,0 +1,31 @@
+
+
+.resume {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 4px 8px;
+    gap: 8px;
+
+    &:hover {
+        cursor: pointer;
+
+        .resume__text {
+            color: blue;
+        }
+    }
+
+    &__download-icon {
+        height: 20px;
+        width: 30px;
+    }
+
+    &__text {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
