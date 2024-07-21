@@ -1,6 +1,6 @@
-import { block } from "million/react";
 
-const About = block(() => {
+
+const About = () => {
     return (
         <div className="about">
             <p className="about__copy">
@@ -8,6 +8,6 @@ const About = block(() => {
             </p>
         </div>
     )
-})
+}
 
 export default About;

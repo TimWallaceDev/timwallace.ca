@@ -1,10 +1,8 @@
 
-import { block } from "million/react";
 import melodyMastermind from "./assets/Melody MasterMind - Desktop.png"
 import humanMagic from "./assets/Human Magic - full site.png"
 
-
-const Projects = block(() => {
+const Projects = () => {
 
     return (
         <div className="projects">
@@ -50,6 +48,6 @@ const Projects = block(() => {
             </div>
         </div >
     )
-})
+}
 
 export default Projects;
