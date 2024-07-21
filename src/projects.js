@@ -21,7 +21,7 @@ const Projects = () => {
                             <p className="project__description">A music guessing game. Choose from a variety of genres and playlists. The goal is to correctly identify the title of the song playing. The faster you answer, the more points you earn.</p>
                         </div>
                         <div className="project__bottom">
-                            <a className="project__live-link" href="https://timwallace.ca/melody-mastermind/#/melody-mastermind" target="_blank" rel="noreferrer">Live Link</a>
+                            <a className="project__live-link" href="https://timwallace.ca/melody-mastermind/" target="_blank" rel="noreferrer">Live Link</a>
                             <a className="project__github-link" href="https://github.com/TimWallaceDev/melody-mastermind" target="_blank" rel="noreferrer">Github Repo</a>
                         </div>
                     </div>
