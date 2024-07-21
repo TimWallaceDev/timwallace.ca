@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div className="about">
             <p className="about__copy">
-            Hi, I'm Tim Wallace, a web developer with a love for coding, bikes, and music. I discovered programming during the COVID-19 pandemic while creating a website for my band which marked a new chapter in my exploration of web development. When not immersed in coding, you'll find me in the world of music, often playing the trombone.
+            Hello! I'm Tim Wallace, a passionate full-stack developer with a flair for creativity, thanks to my background in jazz trombone. I thrive on using modern frameworks like React and Express to build user-centric websites. When I'm not coding, you can find me on my YouTube channel, where I enjoy solving CSS challenges and sharing cool CSS techniques. My love for both learning and teaching keeps me motivated to continuously improve and expand my skills.
             </p>
         </div>
     )
