@@ -4,8 +4,10 @@ import Contact from "./contact.js";
 import Projects from "./projects.js"
 import Resume  from "./components/Resume/Resume.jsx"
 import './App.scss';
+import { consoleGreeting } from "./components/console.js";
 
 function App() {
+  consoleGreeting()
   return (
     <div className="App">
       <Resume/>
