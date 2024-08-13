@@ -1,4 +1,9 @@
 @use "./styles/mixins.scss" as *;
+@use "./styles/variables.scss" as *;
+
+body {
+  font-family: $primary-font;
+}
 
 .hero {
   @include section;
@@ -10,12 +15,27 @@
 }
 
 .name {
-  font-size: 10rem;
+  font-size: 7rem;
   text-align: center;
+  font-family: $heading-font;
+  font-weight: $heavy-weight;
+  margin-bottom: 0;
+
+  @include tablet {
+    letter-spacing: -1px;
+  }
+
+  @include desktop {
+    letter-spacing: -2px;
+  }
 }
 
 .occupation {
   font-size: 3rem;
+  font-family: $primary-font;
+  font-weight: $light-weight;
+  margin-top: 2rem;
+
 }
 
 
@@ -27,6 +47,7 @@
   box-sizing: border-box;
   padding: 0 16px;
   margin-bottom: 128px;
+  font-family: $primary-font;
 
   @include tablet {
     min-height: 100vh;
@@ -59,7 +80,10 @@
   }
 
   &__heading {
-    font-size: 4rem;
+    font-size: 3rem;
+    font-family: $primary-font;
+    font-weight: $medium-weight;
+    margin-top: 2rem;
     text-align: center;
   }
 
@@ -100,6 +124,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 16px;
+
     @include tablet {
       flex: 1;
     }
@@ -145,6 +170,7 @@
     font-size: 1.5rem;
     color: black;
     margin: 0;
+    font-weight: $light-weight;
   }
 
   &__description {
@@ -159,15 +185,17 @@
 .contact {
 
   &__heading {
-    font-size: 4rem;
-    text-align: center;
+    font-size: 3rem;
+    font-family: $primary-font;
+    font-weight: $medium-weight;
+    margin-top: 2rem;
   }
 
   &__link {
     text-decoration: none;
     color: black;
 
-    
+
   }
 
   &__item {
@@ -193,9 +221,11 @@
     flex: 1;
     font-size: 1rem;
     // text-wrap: nowrap;
+    font-weight: $medium-weight;
+
 
     @include tablet {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
   }
 }

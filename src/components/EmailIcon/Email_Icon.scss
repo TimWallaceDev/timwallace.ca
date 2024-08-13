@@ -1,0 +1,40 @@
+
+
+.email-icon {
+    width: 25px;
+    height: 15px;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid black;
+    border-color: black;
+
+    &--hovered {
+        border-top-color: blue;
+    }
+
+    &__top {
+        border-top:7px solid black;
+        border-left: 12.5px solid transparent;
+        border-right: 12.5px solid transparent;
+        position: absolute;
+        left: 0.5px;
+    }
+
+    &__right {
+        border-right:25px solid black;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        position: absolute;
+        top: 1px;
+        right: 0;
+    }
+
+    &__left {
+        border-left:25px solid black;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        position: absolute;
+        top: 1px;
+        left: 0;        
+    }
+}

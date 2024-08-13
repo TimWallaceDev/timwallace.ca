@@ -1,0 +1,19 @@
+
+
+
+  /* abel-regular - latin */
+@font-face {
+    font-family: "Abel";
+    src: url('../assets/fonts/abel-v18-regular.woff2') format('woff2');
+    src: url("../assets/fonts/Abel-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
+  
+  // Semi-bold
+  @font-face {
+    font-family: "Montserrat";
+    src: url('../assets/fonts/montserrat-v26-regular.woff2') format('woff2');
+    // src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+  }
+

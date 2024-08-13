@@ -1,4 +1,7 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
 
+$resume-text-color: #111;
 
 .resume {
     position: fixed;
@@ -9,24 +12,27 @@
     justify-content: center;
     margin: 16px;
     padding: 4px 8px;
-    gap: 8px;
+    gap: 4px;
+
+    &__text {
+        font-size: 1rem;
+        font-weight: 100;
+        color: $resume-text-color;
+        display: inline-block;
+        font-family: $primary-font;
+    }
+
+    &__icon {
+        color: $resume-text-color;
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
 
     &:hover {
         cursor: pointer;
 
-        .resume__text {
+        .resume__text, .resume__icon {
             color: blue;
         }
-    }
-
-    &__download-icon {
-        height: 20px;
-        width: 30px;
-    }
-
-    &__text {
-        font-size: 1rem;
-        font-weight: 400;
-        color: black;
     }
 }
