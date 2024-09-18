@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Email_Icon.scss"
 
-function Email_Icon({emailIsHovered}) {
+export function EmailIcon({emailIsHovered}) {
 
 
   return (
@@ -12,5 +12,3 @@ function Email_Icon({emailIsHovered}) {
     </div>
   )
 }
-
-export default Email_Icon
