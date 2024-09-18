@@ -1,6 +1,6 @@
 import Hero from "./hero.js"
 import About from "./about.js"
-import Contact from "./contact.js";
+import Contact from "./pages/Contact/Contact.js";
 import Projects from "./projects.js"
 import Resume  from "./components/Resume/Resume.jsx"
 import './App.scss';

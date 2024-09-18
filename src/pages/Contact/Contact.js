@@ -1,9 +1,8 @@
-import { ContactLinks } from "./components/ContactLinks/ContactLinks";
-import { ContactForm } from "./components/ContactForm/ContactForm";
+import { ContactLinks } from "../../components/ContactLinks/ContactLinks";
+import { ContactForm } from "../../components/ContactForm/ContactForm";
+import "./Contact.scss";
 
 const Contact = () => {
-
-
 
     return (
         <section className="contact-section">
