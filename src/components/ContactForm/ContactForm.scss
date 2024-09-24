@@ -10,6 +10,7 @@
     width: 100%;
     max-width: 700px;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 4px;
 
@@ -33,11 +34,48 @@
         min-height: 200px;
     }
 
-    &__contact-message {
+    &__bottom-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__message-status {
         display: none;
 
         &--visible {
             display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        &--successful {
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-align: center;
+            margin: 1rem auto;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: white;
+            border: 1px solid black;
+        }
+
+        &--failed {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-align: center;
+            margin: 1rem auto;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: white;
+            border: 1px solid black;
         }
     }
 
