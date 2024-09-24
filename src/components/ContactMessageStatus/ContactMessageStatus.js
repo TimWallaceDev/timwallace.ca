@@ -9,10 +9,13 @@ export function ContactMessageStatus(props) {
     const name = props.name
     const message = props.message
 
+
+    //no message has been sent yet
     if (!contactMessageVisible) {
         return
     }
 
+    //in the middle of sending
     if (isSending === true) {
         return (
             <div className="form__message-status--visible form__message-status--successful">
@@ -23,8 +26,20 @@ export function ContactMessageStatus(props) {
             </div>
         )
     }
-    else if (isSending === false) {
-        if (!name || !message) {
+    //has been sent 
+    else {
+        
+        if (isSuccessful) {
+            return (
+                <div className="form__message-status--visible form__message-status--successful">
+                    <span>
+                        Message Successful
+                    </span>
+                    <img src={check} alt="checkmark" />
+                </div>
+            )
+        }
+        else if (!name || !message) {
 
             return (
                 <div className="form__message-status--visible form__message-status--failed">
@@ -35,21 +50,11 @@ export function ContactMessageStatus(props) {
                 </div>
             )
         }
-        if (isSuccessful === true) {
-            return (
-                <div className="form__message-status--visible form__message-status--successful">
-                    <span>
-                        Message Successful!
-                    </span>
-                    <img src={check} alt="checkmark" />
-                </div>
-            )
-        }
-        else if (isSuccessful === false) {
+        else {
             return (
                 <div className="form__message-status--visible form__message-status--failed">
                     <span>
-                        Message Failed!
+                        Message Failed
                     </span>
                     <img src={failed} alt="error icon" />
                 </div>
