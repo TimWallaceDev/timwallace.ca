@@ -1,0 +1,31 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin-bottom: 128px;
+    font-family: $primary-font;
+
+    @include tablet {
+        min-height: 100vh;
+        margin-bottom: 0;
+    }
+
+    &__copy {
+        max-width: 41rem;
+        width: 100%;
+        line-height: 2;
+        font-size: 1.3rem;
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+            text-indent: 4rem;
+        }
+    }
+}

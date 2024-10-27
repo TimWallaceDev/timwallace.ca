@@ -20,6 +20,11 @@
     &__link {
         text-decoration: none;
         color: black;
+
+        @include dark-mode {
+            color: white;
+        }
+
     }
 
     &__items {

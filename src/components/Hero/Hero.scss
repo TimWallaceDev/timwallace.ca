@@ -1,0 +1,26 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+
+.name {
+    font-size: 7rem;
+    text-align: center;
+    font-family: $heading-font;
+    font-weight: $heavy-weight;
+    margin-bottom: 0;
+
+    @include tablet {
+        letter-spacing: -1px;
+    }
+
+    @include desktop {
+        letter-spacing: -2px;
+    }
+}
+
+.occupation {
+    font-size: 3rem;
+    font-family: $primary-font;
+    font-weight: $light-weight;
+    margin-top: 2rem;
+}

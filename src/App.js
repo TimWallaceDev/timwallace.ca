@@ -1,5 +1,5 @@
-import Hero from "./hero.js"
-import About from "./about.js"
+import Hero from "./components/Hero/Hero.js";
+import About from "./components/About/About.js";
 import Contact from "./pages/Contact/Contact.js";
 import Projects from "./projects.js"
 import Resume  from "./components/Resume/Resume.jsx"
