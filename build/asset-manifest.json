@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.a7a6ff6b.css",
+    "main.css": "/static/css/main.8cebf543.css",
     "main.js": "/static/js/main.efafbe90.js",
     "static/media/Melody MasterMind - Desktop.png": "/static/media/Melody MasterMind - Desktop.372efea4fc6c3e470f73.png",
     "static/media/graphs.png": "/static/media/graphs.a8dca72e4ac360247d97.png",
@@ -13,11 +13,11 @@
     "static/media/check_circle.svg": "/static/media/check_circle.bf8aef102166f4abfc8438548238afed.svg",
     "static/media/send.svg": "/static/media/send.60fb58dc78673259f9157e36487f2d7f.svg",
     "static/media/arrow_forward.svg": "/static/media/arrow_forward.4d9e3e89961bdbe145a0756a5124d544.svg",
-    "main.a7a6ff6b.css.map": "/static/css/main.a7a6ff6b.css.map",
+    "main.8cebf543.css.map": "/static/css/main.8cebf543.css.map",
     "main.efafbe90.js.map": "/static/js/main.efafbe90.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7a6ff6b.css",
+    "static/css/main.8cebf543.css",
     "static/js/main.efafbe90.js"
   ]
 }

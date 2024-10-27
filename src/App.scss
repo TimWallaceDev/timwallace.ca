@@ -76,9 +76,9 @@ body {
     width: 100%;
     border: 1px solid black;
 
-    @include dark-mode {
-      border-color: white;
-    }
+    // @include dark-mode {
+    //   border-color: white;
+    // }
 
     @include tablet {
       max-width: 300px;
@@ -93,16 +93,16 @@ body {
     width: min-content;
     text-wrap: nowrap;
 
-    @include dark-mode {
-      color: red;
-    }
+    // @include dark-mode {
+    //   color: red;
+    // }
 
     &:hover {
       color: red;
 
-      @include dark-mode {
-        color: blue;
-      }
+      // @include dark-mode {
+      //   color: blue;
+      // }
     }
   }
 
@@ -114,16 +114,16 @@ body {
     width: min-content;
     text-wrap: nowrap;
 
-    @include dark-mode {
-      color: red;
-    }
+    // @include dark-mode {
+    //   color: red;
+    // }
 
     &:hover {
       color: red;
 
-      @include dark-mode {
-        color: blue;
-      }
+      // @include dark-mode {
+      //   color: blue;
+      // }
     }
   }
 

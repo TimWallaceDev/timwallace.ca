@@ -15,9 +15,9 @@
     padding: 2rem;
     border-radius: 4px;
 
-    @include dark-mode {
-        border-color: white;
-    }
+    // @include dark-mode {
+    //     border-color: white;
+    // }
 
     &__heading {
         margin: 0;
@@ -93,16 +93,16 @@
         padding: 8px 1rem;
         border-radius: 4px;
 
-        @include dark-mode {
-            background-color: green;
-        }
+        // @include dark-mode {
+        //     background-color: green;
+        // }
 
         &:hover {
             background-color: darkblue;
 
-            @include dark-mode {
-                background-color: darkgreen;
-            }
+            // @include dark-mode {
+            //     background-color: darkgreen;
+            // }
         }
 
         @include tablet {
