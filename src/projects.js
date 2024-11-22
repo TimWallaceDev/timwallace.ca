@@ -51,7 +51,7 @@ const Projects = () => {
                     <div className="project__left">
                         <div className="project__top">
                             <h4 className="project__title">Human Magic</h4>
-                            <p className="project__description">A Website for local Toronto band "Human Magic". Currently the #1 search result in all search engines for "human magic'. </p>
+                            <p className="project__description">A Website for local Toronto band "Human Magic". Currently the #1 search result in all search engines for "Human Magic'. </p>
                         </div>
                         <div className="project__bottom">
                             <a className="project__live-link" href="https://humanmagic.ca" target="_blank" rel="noreferrer">Live Link</a>

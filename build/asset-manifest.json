@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55647df3.css",
-    "main.js": "/static/js/main.efafbe90.js",
+    "main.js": "/static/js/main.8ac91a30.js",
     "static/media/Melody MasterMind - Desktop.png": "/static/media/Melody MasterMind - Desktop.372efea4fc6c3e470f73.png",
     "static/media/graphs.png": "/static/media/graphs.a8dca72e4ac360247d97.png",
     "static/media/Human Magic - full site.png": "/static/media/Human Magic - full site.6969fdd083a6fc038f84.png",
@@ -14,10 +14,10 @@
     "static/media/send.svg": "/static/media/send.60fb58dc78673259f9157e36487f2d7f.svg",
     "static/media/arrow_forward.svg": "/static/media/arrow_forward.4d9e3e89961bdbe145a0756a5124d544.svg",
     "main.55647df3.css.map": "/static/css/main.55647df3.css.map",
-    "main.efafbe90.js.map": "/static/js/main.efafbe90.js.map"
+    "main.8ac91a30.js.map": "/static/js/main.8ac91a30.js.map"
   },
   "entrypoints": [
     "static/css/main.55647df3.css",
-    "static/js/main.efafbe90.js"
+    "static/js/main.8ac91a30.js"
   ]
 }
