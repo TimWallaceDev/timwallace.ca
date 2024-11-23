@@ -1,17 +1,26 @@
-name: Hello World CI
-
+name: SSH Test
 on:
   push:
     branches:
-      - main  # Adjust if you use a different branch name
+      - main
 
 jobs:
-  build:
+  test-ssh:
     runs-on: ubuntu-latest
-
+    environment: "Ubuntu in the sky"
     steps:
-      # - name: Checkout repository
-      #   uses: actions/checkout@v3
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ls -la ~/.ssh/deploy_key  # Debug: check file permissions
+          echo "Key file contents (first line only):"
+          head -n 1 ~/.ssh/deploy_key  # Debug: verify key starts correctly
+          ssh-keygen -l -f ~/.ssh/deploy_key || echo "Invalid key format"  # Debug: validate key
+      - name: Add host key
+        run: ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      - name: Echo Hello World
-        run: echo "Hello World"
+      - name: Test Connection
+        run: |
+          ssh -v -i ~/.ssh/deploy_key -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} whoami
