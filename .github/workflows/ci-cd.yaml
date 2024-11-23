@@ -24,3 +24,5 @@ jobs:
       - name: Test Connection
         run: |
           ssh -v -i ~/.ssh/deploy_key -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} whoami
+          cd /var/www/portfolio
+          git pull
