@@ -21,8 +21,9 @@ jobs:
       - name: Add host key
         run: ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      - name: Test Connection
+      - name: SSH and Git Pull
         run: |
-          ssh -v -i ~/.ssh/deploy_key -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} whoami
+          ssh -i ~/.ssh/deploy_key -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
           cd /var/www/portfolio
-          git pull
+          git pull origin main
+          EOF
