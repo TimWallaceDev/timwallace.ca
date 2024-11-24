@@ -55,6 +55,10 @@ jobs:
       - name: Install dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
+
+      - name: Checkly Login
+        id: checkly-login
+        run: npx checkly login
         
       - name: Run checks
         id: run-checks
