@@ -32,10 +32,10 @@ jobs:
           git pull --rebase origin main
           EOF
           
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: '20'
+      #- name: Setup node
+      #  uses: actions/setup-node@v3
+      #  with:
+      #    node-version-file: '20'
       - name: Restore or cache node_modules
         id: cache-node-modules
         uses: actions/cache@v3
