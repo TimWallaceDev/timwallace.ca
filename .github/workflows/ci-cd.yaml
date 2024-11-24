@@ -9,51 +9,58 @@ env:
   CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}
 
 jobs:
-  test-ssh:
+  deploy:
     runs-on: ubuntu-latest
     environment: "Ubuntu in the sky"
     steps:
-      - name: Checkout repository  # Add this step
-        uses: actions/checkout@v4
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ls -la ~/.ssh/deploy_key  # Debug: check file permissions
+          ls -la ~/.ssh/deploy_key
           echo "Key file contents (first line only):"
-          head -n 1 ~/.ssh/deploy_key  # Debug: verify key starts correctly
-          ssh-keygen -l -f ~/.ssh/deploy_key || echo "Invalid key format"  # Debug: validate key
+          head -n 1 ~/.ssh/deploy_key
+          ssh-keygen -l -f ~/.ssh/deploy_key || echo "Invalid key format"
+      
       - name: Add host key
         run: ssh-keyscan -p ${{ secrets.PORT }} ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      - name: SSH into VPS and pull latest code
+      - name: Deploy to VPS
         run: |
           ssh -i ~/.ssh/deploy_key -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
           cd /var/www/portfolio
           git pull --rebase origin main
           EOF
-          
+
+  test:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+          
       - name: Restore or cache node_modules
         id: cache-node-modules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('package-lock.json') }}
+          
       - name: Install dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
-      - name: Run checks # run the checks passing in the ENVIRONMENT_URL and recording a test session.
+        
+      - name: Run checks
         id: run-checks
-        run: npx checkly test #-e --reporter=github --record
-      #- name: Create summary # export the markdown report to the job summary.
-      #  id: create-summary
-      #  run: cat checkly-github-report.md > $GITHUB_STEP_SUMMARY
-      - name: Deploy checks # if the test run was successful and we are on Production, deploy the checks
+        run: npx checkly test
+        
+      - name: Deploy checks
         id: deploy-checks
-        if: steps.run-checks.outcome == 'success' #&& github.event.deployment_status.environment == 'Production'
+        if: steps.run-checks.outcome == 'success'
         run: npx checkly deploy --force
