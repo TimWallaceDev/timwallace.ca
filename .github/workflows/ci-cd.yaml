@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: "Ubuntu in the sky"
     steps:
+      - name: Checkout repository  # Add this step
+        uses: actions/checkout@v4
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
