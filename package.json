@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.0",
     "checkly": "latest",
     "ts-node": "latest",
     "typescript": "latest"
