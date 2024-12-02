@@ -2,6 +2,7 @@
 import melodyMastermind from "./assets/Melody MasterMind - Desktop.png"
 import humanMagic from "./assets/Human Magic - full site.png"
 import graphs from "./assets/graphs.png"
+import devRoulette from "./assets/devRoulette.png"
 
 const Projects = () => {
 
@@ -11,7 +12,7 @@ const Projects = () => {
 
             <div className="projects__container">
 
-                <div className="project">
+                {/* <div className="project">
                     <div className="project__right">
                         <img className="project__image" src={melodyMastermind} alt="screenshot of melody mastermind game UI"></img>
                     </div>
@@ -23,6 +24,22 @@ const Projects = () => {
                         <div className="project__bottom">
                             <a className="project__live-link" href="https://timwallace.ca/melody-mastermind/" target="_blank" rel="noreferrer">Live Link</a>
                             <a className="project__github-link" href="https://github.com/TimWallaceDev/melody-mastermind" target="_blank" rel="noreferrer">Github Repo</a>
+                        </div>
+                    </div>
+                </div> */}
+
+                <div className="project">
+                    <div className="project__right">
+                        <img className="project__image" src={devRoulette} alt="screenshot of devroulette UI"></img>
+                    </div>
+                    <div className="project__left">
+                        <div className="project__top">
+                            <h4 className="project__title">DevRoulette</h4>
+                            <p className="project__description"> a real time coding platform for quick pair programming sessions. Includes a shared code editor for real time collaboration.</p>
+                        </div>
+                        <div className="project__bottom">
+                            <a className="project__live-link" href="https://devroulette.com" target="_blank" rel="noreferrer">Live Link</a>
+                            <a className="project__github-link" href="https://github.com/TimWallaceDev/devRoulette" target="_blank" rel="noreferrer">Github Repo</a>
                         </div>
                     </div>
                 </div>
